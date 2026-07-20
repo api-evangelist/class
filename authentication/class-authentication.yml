@@ -1,0 +1,43 @@
+generated: '2026-07-18'
+method: searched
+source: https://developer.class.com
+docs: https://developer.class.com
+summary:
+  types: [http]
+  http_scheme: bearer
+  key_style: api-key
+  scoped: true
+  notes: >-
+    API keys are minted in the Class admin portal (API Keys section) with a
+    selectable scope set and an optional expiration date. The one-time secret is
+    shown once on creation. Requests authenticate with an HTTP Bearer token.
+schemes:
+  - name: bearerApiKey
+    type: http
+    scheme: bearer
+    description: >-
+      Authorization: Bearer [api_key_secret]. The bearer credential is a Class
+      API key secret generated in the admin portal; each key carries a scope set
+      and optional expiration.
+    sources: [https://developer.class.com]
+scopes:
+  note: >-
+    Scopes are attached to each API key (not an OAuth2 flow). Selecting a write
+    scope automatically grants the matching read scope. Each endpoint documents
+    its required scope.
+  values:
+    - class:read
+    - class:write
+    - enrollment:read
+    - enrollment:write
+    - attendance:read
+    - metrics:read
+    - schedule:read
+    - schedule:write
+    - template:read
+    - template:write
+    - user:read
+    - user:write
+base_url: >-
+  Class assigns each organization a unique base URL, found on the API Keys page.
+  Endpoints follow [api_base_url]/api/v1/[resource].

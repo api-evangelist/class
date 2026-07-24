@@ -1,0 +1,46 @@
+generated: '2026-07-18'
+method: searched
+source: https://developer.class.com
+docs: https://developer.class.com
+authentication:
+  style: bearer-api-key
+  header: 'Authorization: Bearer [api_key_secret]'
+  scoped: true
+  ref: authentication/class-authentication.yml
+idempotency:
+  supported: false
+  notes: No idempotency-key header or replay contract is documented.
+pagination:
+  style: page-number
+  params:
+    - name: page
+      description: The page number to retrieve. Must be a positive integer.
+    - name: limit
+      description: >-
+        Number of records per page. Must be a positive integer. Maximum 1000.
+  availability: Supported on select endpoints only.
+  response_fields:
+    envelope: data
+    pagination:
+      - total_records
+      - current_page
+      - total_pages
+      - next_page
+      - prev_page
+datetime:
+  timestamps: Unix time (integer seconds since 1970-01-01T00:00:00Z).
+  timezones: >-
+    IANA Time Zone Database IDs (e.g. America/Los_Angeles).
+versioning:
+  scheme: uri-path
+  current: v1
+  path: /api/v1/
+error_envelope:
+  style: http-status
+  ref: errors/class-problem-types.yml
+  success_codes: 2xx
+  error_codes: 4xx and 5xx
+rate_limiting:
+  documented: false
+identifiers:
+  notes: Several resources accept multiple identifier options.

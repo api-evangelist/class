@@ -1,0 +1,14 @@
+generated: '2026-07-18'
+method: searched
+source: https://developer.class.com
+versioning:
+  scheme: uri-path
+  current: v1
+  path: /api/v1/
+  docs: https://developer.class.com
+status_page: https://status.class.com
+deprecation:
+  policy_documented: false
+sla:
+  documented: false
+deprecated_operations: []

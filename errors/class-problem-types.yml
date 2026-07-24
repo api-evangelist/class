@@ -1,0 +1,24 @@
+generated: '2026-07-18'
+method: searched
+source: https://developer.class.com
+format: http-status
+envelope: HTTP status code; success responses are 2xx, errors are 4xx and above.
+problems:
+  - status: 400
+    title: Bad Request
+    description: The request could not be understood by the server due to malformed syntax.
+  - status: 401
+    title: Unauthorized
+    description: The API key is malformed or the Authorization header is not included.
+  - status: 403
+    title: Forbidden
+    description: The API key does not include the required scopes to access the resource.
+  - status: 404
+    title: Not Found
+    description: The resource could not be found.
+  - status: 500
+    title: Internal Server Error
+    description: Something unexpected happened while processing the call. Try again later.
+  - status: 503
+    title: Service Unavailable
+    description: Class is temporarily offline for maintenance. Try again later.

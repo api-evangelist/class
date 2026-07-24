@@ -1,8 +1,30 @@
 aid: class
+accessModel:
+  pricing: unknown
+  onboarding: self-serve
+  trial: false
+  try_now: false
+  public: false
+  label: Self-serve signup
+  confidence: medium
+  source:
+  - authentication
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/class.png
 name: Class
-description: 'Class is a company surfaced as a portfolio company of emergence-capital and added to the
-  API Evangelist network as a stub for enrichment. Sector: edtech. This profile is a lead awaiting the
-  enrichment pipeline.'
+description: >-
+  Class (Class Technologies Inc.) is an edtech company providing a
+  next-generation virtual classroom platform for instructor-led live learning.
+  Built on Zoom and Microsoft Teams and delivered on the web as Class
+  Collaborate, it adds teaching and engagement tools — interactive breakout
+  rooms, engagement analytics, course templates, and automated attendance — and
+  integrates with major learning management systems (Canvas, D2L Brightspace,
+  Blackboard Learn, Docebo, Cornerstone OnDemand, Open LMS). Class serves K-12
+  schools, higher education, government, healthcare, financial services, and
+  corporate training. Class publishes a REST API for managing classes,
+  enrollments, schedules, templates, users, launch links, and reporting,
+  authenticated with scoped API keys.
 url: https://raw.githubusercontent.com/api-evangelist/class/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -12,11 +34,44 @@ x-tier: stub
 x-tier-reason: portfolio-lead
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-18'
 tags:
 - Company
 - Edtech
-apis: []
+- Education
+- Virtual Classroom
+- Learning
+- LMS
+- Video Conferencing
+- Live Learning
+apis:
+- name: Class API
+  description: >-
+    REST API for provisioning and managing Class virtual classrooms — Classes,
+    Enrollments, Schedules, Templates, Users, launch links, and attendance /
+    metrics reporting. 27 endpoints across 7 resource groups, authenticated with
+    scoped API keys via HTTP Bearer.
+  humanURL: https://developer.class.com
+  baseURL: https://developer.class.com
+  tags:
+  - Education
+  - Virtual Classroom
+  - LMS
+  properties:
+  - type: Documentation
+    url: https://developer.class.com
+  - type: APIReference
+    url: https://developer.class.com
+  - type: GettingStarted
+    url: https://developer.class.com
+  - type: Authentication
+    url: authentication/class-authentication.yml
+  - type: Conventions
+    url: conventions/class-conventions.yml
+  - type: ErrorCatalog
+    url: errors/class-problem-types.yml
+  - type: Lifecycle
+    url: lifecycle/class-lifecycle.yml
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
@@ -25,3 +80,42 @@ maintainers:
 common:
 - type: Website
   url: https://www.class.com
+- type: DeveloperPortal
+  url: https://developer.class.com
+- type: Documentation
+  url: https://developer.class.com
+- type: APIReference
+  url: https://developer.class.com
+- type: GettingStarted
+  url: https://developer.class.com
+- type: Support
+  url: https://support.class.com
+- type: Blog
+  url: https://www.class.com/blog
+- type: StatusPage
+  url: https://status.class.com
+- type: PrivacyPolicy
+  url: https://www.class.com/privacy-policy
+- type: TermsOfService
+  url: https://www.class.com/terms-of-service
+- type: TrustCenter
+  url: security/class-trust-center.yml
+- type: Compliance
+  url: https://www.class.com/security
+- type: Authentication
+  url: authentication/class-authentication.yml
+- type: Conventions
+  url: conventions/class-conventions.yml
+- type: ErrorCatalog
+  url: errors/class-problem-types.yml
+- type: Lifecycle
+  url: lifecycle/class-lifecycle.yml
+- type: DomainSecurity
+  url: security/class-domain-security.yml
+- type: LLMsTxt
+  url: llms/class-llms.txt
+x-enrichment:
+  date: '2026-07-19'
+  status: backfilled
+  pass: local-v1
+  note: backfilled from .gitignore signal + verified work evidence
